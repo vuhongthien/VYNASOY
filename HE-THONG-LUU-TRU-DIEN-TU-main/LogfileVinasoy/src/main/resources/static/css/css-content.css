@@ -1,0 +1,63 @@
+button.btnaction.border-0 {
+    background: transparent;
+}
+.truycap.modal-body {
+    text-align: left !important;
+}
+.bd-highlight.row.mb-2:hover {
+    color: #6EB43F;
+}
+a.bd-highlight {
+    font-size: 14px;
+    text-align: left;
+}
+.abc.col-md-12.d-flex.flex-column.bd-highlight {
+    line-height: 3px;
+}
+a.bd-highlight:hover {
+    color:#6EB43F !important;
+}
+.input-group>.form-control, .input-group>.form-select {
+    background: white;
+    outline: 1px !important;
+    border: 1px solid #57565663;
+    font-size: 13px;
+    box-shadow: inset 0 0 1px 0px #464646;
+}
+.saochep {
+     border: 1px solid #57565663;
+     font-size: 13px;
+     border-color: #ffffff00;
+     background: transparent;
+ }
+
+
+.saochep:hover {
+    color: #fff;
+    background-color: #6eb43f;
+    border: 1px solid #57565663;
+}
+ td,  th {
+    border-style: inset;
+    border-width: 0;
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 17px;
+    text-align: center;
+
+}
+td.text-truncate {
+    text-align: inherit;
+}
+.modal-content.row {
+    background: transparent;
+}
+img#close {
+    width: 45px;
+    opacity: 0.5;
+}
+img#close:hover {
+    opacity: 1;
+}

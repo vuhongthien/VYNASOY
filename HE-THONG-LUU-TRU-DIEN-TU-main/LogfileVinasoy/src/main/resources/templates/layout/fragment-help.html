@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+
+</head>
+<body>
+<div th:fragment="help" class="col-md-12 d-flex bd-highlight ">
+    <a class="ms-auto p-1 flex-shrink-1 bd-highlight" data-bs-target="#help" data-bs-toggle="modal" >
+    <img  height="25px" src="/image/help.png">
+    </a>
+    <div th:fragment="popuphelp" class="modal fade" id="help" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content row m-0">
+                <div class="md-col-12 p-0 d-flex flex-row-reverse bd-highlight">
+                    <img id="close" data-bs-dismiss="modal" class="p-0 m-0 bd-highlight" src="/image/pop-up/close.png">
+                </div>
+                <div class="view modal-body p-0 d-flex justify-content-center md-col-12 ">
+
+                        <embed  th:src="@{http://localhost:8080/web/attachment/readguide/{id}(id=${guide.id})}"  width="95%" height="100%" type="application/pdf"/>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

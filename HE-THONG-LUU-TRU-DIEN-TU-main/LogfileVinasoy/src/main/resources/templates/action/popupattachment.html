@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="UTF-8">
+
+</head>
+<body>
+<!--popup chính của phân quyền-->
+<div th:fragment="popupattachment" class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-sm">
+    <div class="modal-content">
+      <div class="modal-body ">
+        <div class="row">
+          <div class="abc col-md-12 d-flex flex-column bd-highlight ">
+            <a class="bd-highlight " data-bs-target="#phanquyen"
+               data-bs-toggle="modal" data-bs-dismiss="modal" href="#">
+              <img src="/image/user1.png">
+              Phân quyền truy cập
+            </a><br>
+            <a class="bd-highlight " data-bs-target="#view"
+               data-bs-toggle="modal" data-bs-dismiss="modal" href="#">
+              <img src="/image/pop-up/visibility.png">
+              xem nhanh</a><br>
+            <a class="bd-highlight " data-bs-target="#share"
+               data-bs-toggle="modal" data-bs-dismiss="modal" href="#"><img src="/image/pop-up/share.png">
+              Chia sẻ</a><br>
+            <a class="bd-highlight " data-bs-target="#link"
+               data-bs-toggle="modal" data-bs-dismiss="modal" href="#"><img src="/image/pop-up/link.png">
+              Nhận đường liên kết</a><br>
+            <a class="bd-highlight " data-bs-target="#download"
+               data-bs-toggle="modal" data-bs-dismiss="modal" href="#"><img src="/image/pop-up/download.png">
+              Tải xuống</a><br>
+            <a class="bd-highlight " data-bs-target="#add" onclick="starattachment()"
+               data-bs-toggle="modal" data-bs-dismiss="modal" href="#"><img src="/image/pop-up/star.png">
+              Thêm vào tài liệu có đánh dấu sao</a><br>
+            <a class="bd-highlight " data-bs-target="#send"
+               data-bs-toggle="modal" data-bs-dismiss="modal" href="#"><img src="/image/pop-up/email.png">
+              Gửi mail</a><br>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- view nhanh-->
+<div th:fragment="popupattachment" class="modal fade" id="view" tabindex="-1" aria-labelledby="exampleModalToggleLabel456" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+      <div class="view modal-body ">
+        <div class='embed-responsive' style='padding-bottom:90%'>
+          <iframe src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20210101201653/PDF.pdf"  width="100%" height="100%" ></iframe>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!--popup con của phân quyền-->
+<div th:fragment="popupattachment" class="modal fade" id="phanquyen" tabindex="-1" aria-labelledby="exampleModalToggleLabel2" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalToggleLabel2">Phân quyền truy cập</h5>
+      </div>
+      <div class="truycap modal-body ">
+        <div class="row">
+          <div class="col-md-6 ms-2 d-flex flex-column bd-highlight mb-2">
+            <b >Hiển thị</b>
+          </div>
+          <div class="col-md-12 d-flex flex-column bd-highlight">
+            <div class="bd-highlight row mb-2">
+              <div class="col-md-2 d-flex justify-content-end">
+                <input class="form-check-input" type="checkbox" value="" id="an">
+              </div>
+              <div class="col-md-9">
+                <label class="form-check-label " for="an">
+                  Ẩn tệp tin/thư mục này với người dùng
+                </label>
+              </div>
+            </div>
+            <div class="bd-highlight row mb-2">
+              <div class="col-md-2 d-flex justify-content-end">
+                <input class="form-check-input" type="checkbox" value="" id="hienhom">
+              </div>
+              <div class="col-md-9">
+                <label class="form-check-label " for="hienhom">
+                  Hiển thị tệp tin/thư mục này với nhóm:
+                </label>
+              </div>
+            </div>
+            <div class="bd-highlight row mb-2">
+              <div class="col-md-2 d-flex justify-content-end">
+                <input class="form-check-input" type="checkbox" value="" id="hienchon">
+              </div>
+              <div class="col-md-9">
+                <label class="form-check-label " for="hienchon">
+                  Hiển thị tệp tin/thư mục này cho các người dùng được chọn
+                </label>
+              </div>
+            </div>
+            <div class="bd-highlight row mb-2">
+              <div class="col-md-2 d-flex justify-content-end">
+                <input class="form-check-input" type="checkbox" value="" id="annhom">
+              </div>
+              <div class="col-md-9">
+                <label class="form-check-label " for="annhom">
+                  Ẩn tệp tin/thư mục này với nhóm
+                </label>
+              </div>
+            </div>
+            <div class="bd-highlight row mb-2">
+              <div class="col-md-2 d-flex justify-content-end">
+                <input class="form-check-input" type="checkbox" value="" id="anchon">
+              </div>
+              <div class="col-md-9">
+                <label class="form-check-label " for="anchon">
+                  Ẩn tệp tin/thư mục này cho các người dùng được chọn
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 ms-2 d-flex flex-column bd-highlight mb-2">
+            <b class="bd-highlight">Tải xuống</b>
+          </div>
+          <div class="col-md-12 d-flex flex-column justify-content-end bd-highlight">
+            <div class="bd-highlight row mb-2">
+              <div class="col-md-2 d-flex justify-content-end">
+                <input class="form-check-input" type="checkbox" value="" id="khongtai">
+              </div>
+              <div class="col-md-9">
+                <label class="form-check-label " for="khongtai">
+                  Không cho phép tải tệp tin/thư mục này với người dùng
+                </label>
+              </div>
+            </div>
+            <div class="bd-highlight row mb-2">
+              <div class="col-md-2 d-flex justify-content-end">
+                <input class="form-check-input" type="checkbox" value="" id="chotainhom">
+              </div>
+              <div class="col-md-9">
+                <label class="form-check-label " for="chotainhom">
+                  Cho phép tải tệp tin/thư mục này với nhóm:
+                </label>
+              </div>
+            </div>
+            <div class="bd-highlight row mb-2">
+              <div class="col-md-2 d-flex justify-content-end">
+                <input class="form-check-input" type="checkbox" value="" id="chotainguoidung">
+              </div>
+              <div class="col-md-9">
+                <label class="form-check-label " for="chotainguoidung">
+                  Cho phép tải tệp tin/thư mục này với người dùng:
+                </label>
+              </div>
+            </div>
+            <div class="bd-highlight row mb-2">
+              <div class="col-md-2 d-flex justify-content-end">
+                <input class="form-check-input" type="checkbox" value="" id="khongtainhom">
+              </div>
+              <div class="col-md-9">
+                <label class="form-check-label " for="khongtainhom">
+                  Không cho phép tải tệp tin/thư mục này với nhóm:
+                </label>
+              </div>
+            </div>
+            <div class="bd-highlight row mb-2">
+              <div class="col-md-2 d-flex justify-content-end">
+                <input class="form-check-input" type="checkbox" value="" id="khongtainguoidung">
+              </div>
+              <div class="col-md-9">
+                <label class="form-check-label " for="khongtainguoidung">
+                  Không cho phép tải tệp tin/thư mục này với người dùng:
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 ms-2 d-flex flex-column bd-highlight mb-2">
+            <b class="bd-highlight">Chia sẻ</b>
+          </div>
+          <div class="col-md-12 d-flex flex-column justify-content-end bd-highlight">
+            <div class="bd-highlight row mb-2">
+              <div class="col-md-2 d-flex justify-content-end">
+                <input class="form-check-input" type="checkbox" value="" id="khongsharenguoidung">
+              </div>
+              <div class="col-md-9">
+                <label class="form-check-label " for="khongsharenguoidung">
+                  Không cho phép chia sẻ tệp tin/thư mục này với người dùng
+                </label>
+              </div>
+            </div>
+            <div class="bd-highlight row mb-2">
+              <div class="col-md-2 d-flex justify-content-end">
+                <input class="form-check-input" type="checkbox" value="" id="sharenhom">
+              </div>
+              <div class="col-md-9">
+                <label class="form-check-label " for="sharenhom">
+                  Cho phép chia sẻ tệp tin/thư mục này với nhóm:
+                </label>
+              </div>
+            </div>
+            <div class="bd-highlight row mb-2">
+              <div class="col-md-2 d-flex justify-content-end">
+                <input class="form-check-input" type="checkbox" value="" id="shareuser">
+              </div>
+              <div class="col-md-9">
+                <label class="form-check-label " for="shareuser">
+                  Cho phép chia sẻ tệp tin/thư mục này với người dùng:
+                </label>
+              </div>
+            </div>
+            <div class="bd-highlight row mb-2">
+              <div class="col-md-2 d-flex justify-content-end">
+                <input class="form-check-input" type="checkbox" value="" id="ksharenhom">
+              </div>
+              <div class="col-md-9">
+                <label class="form-check-label " for="ksharenhom">
+                  Không cho phép chia sẻ tệp tin/thư mục này với nhóm:
+                </label>
+              </div>
+            </div>
+            <div class="bd-highlight row mb-2">
+              <div class="col-md-2 d-flex justify-content-end">
+                <input class="form-check-input" type="checkbox" value="" id="kochiase">
+              </div>
+              <div class="col-md-9">
+                <label class="form-check-label " for="kochiase">
+                  Không cho phép chia sẻ tệp tin/thư mục này với người dùng:
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer d-flex justify-content-end ">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Huỷ</button>
+        <button type="button" style="background: #6EB43F; border:none" data-bs-dismiss="modal" class="btn btn-success me-5">Lưu Thay đổi</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Chia sẻ-->
+<div th:fragment="popupattachment" class="modal fade" id="share" tabindex="-1" aria-labelledby="exampleModalToggleLabel3" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalToggleLabel3">Chia sẻ</h5>
+      </div>
+      <div class="truycap modal-body ">
+        <div class="row">
+          <div class="input-group flex-nowrap">
+            <input type="text" class="form-control " id="touser"  placeholder="Chia sẻ cho" aria-label="Username" aria-describedby="addon-wrapping">
+          </div>
+          <div class="col-md-12 ms-2 d-flex flex-column bd-highlight mb-2">
+            <b >Đề xuất</b>
+            <div class="input-group ">
+              <div class="input-group-text">
+                <input class="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for following text input">
+              </div>
+              <input type="text" class="form-control" aria-label="Text input with checkbox">
+            </div>
+            <div class="input-group ">
+              <div class="input-group-text">
+                <input class="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for following text input">
+              </div>
+              <input type="text" class="form-control" aria-label="Text input with checkbox">
+            </div>
+            <div class="input-group mb-3">
+              <div class="input-group-text">
+                <input class="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for following text input">
+              </div>
+              <input type="text" class="form-control" aria-label="Text input with checkbox">
+            </div>
+            <div class="form-floating">
+              <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+              <label for="floatingTextarea2">Comments</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer d-flex justify-content-end ">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Huỷ</button>
+        <button type="submit" onclick="shareattachment()" style="background: #6EB43F; border:none" class="btn btn-success me-5">Chia sẻ</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+<div th:fragment="popup" class="modal fade" id="link" tabindex="-1" aria-labelledby="exampleModalToggleLabel4" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered ">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalToggleLabel4">Nhận đường liên kết</h5>
+      </div>
+      <div class="truycap modal-body ">
+        <div class="input-group mb-3">
+          <input type="text"  value="link dàiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii"
+                 class="form-control" placeholder="Recipient's username" aria-label="Recipient's username"
+                 aria-describedby="button-addon2" readonly>
+          <button class="saochep" type="button" id="button-addon2">Sao chép liên kết</button><br>
+
+        </div>
+      </div>
+      <div class=" mb-3 me-3 d-flex justify-content-end  ">
+        <button type="button" class="btn btn-secondary" style="background: #6EB43F; border:none" data-bs-dismiss="modal">Hoàn thành</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body  >
+
+<div th:fragment="content-6"  class="col-md-10 p-0 ps-4 m-0">
+    <th:block th:insert="~{layout/fragment-help :: help}"></th:block>
+    <div class="col-md-12 d-flex justify-content-center row ">
+        <form class="col-md-12 row p-0 m-0 d-flex justify-content-center" id="formcheck" enctype="multipart/form-data" method="GET" >
+            <div class="col-md-5">
+                <div class="border rounded p-3">
+                <input type="file" th:name="file1" id="file1" accept="application/pdf"/><br>
+                <span>The maximum file upload size is 10.00 MB.</span>
+                <div id="dropContainer" class="d-flex justify-content-center rounded" style="border: 3px dashed #19969f;height:200px;">
+                    <b>Choose file or drop here</b>
+                </div>
+            </div>
+            </div>
+            <div class="col-md-5">
+                <div class="border rounded p-3">
+                    <input type="file" th:name="file2" id="file2" accept="application/pdf"/><br>
+                    <span>The maximum file upload size is 10.00 MB.</span>
+                    <div id="dropContainerr" class="d-flex justify-content-center rounded" style="border: 3px dashed #19969f;height:200px;">
+                        <b>Choose file or drop here</b>
+                    </div>
+                </div>
+            </div>
+            <div class=" d-flex justify-content-center pt-3 mt-5">
+                <input data-bs-target="#check" type="submit"
+                   data-bs-toggle="modal" data-bs-dismiss="modal" class="butontest" >
+                    Kiểm Tra</input>
+        </div>
+        </form>
+        <div id="dialog" style="display: none">
+        </div>
+        <div class="modal fade" id="check" tabindex="-1" aria-labelledby="exampleModalToggleLabel4" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered ">
+                <div class="modal-content">
+                    <div class="truycap modal-body " id="result">
+
+                    </div>
+                    <div class=" mb-3 me-3 d-flex justify-content-center  ">
+                        <button type="button" class="btn btn-secondary" style="background: #6EB43F; border:none" data-bs-dismiss="modal">Hoàn thành</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

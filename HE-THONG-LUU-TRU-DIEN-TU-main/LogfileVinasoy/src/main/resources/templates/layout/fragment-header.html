@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head >
+</head>
+<body>
+<div th:fragment="header" class="col-md-12 border-bottom">
+    <div class="row mt-2 mb-2 d-flex justify-content-center mb-3">
+        <div class="col-md-2 d-flex justify-content-center">
+            <a  href="/web/attachment/"><img src="/image/header/logo.png"></a>
+            <a href="/web/attachment/" class="logoname">HỆ THỐNG LƯU TRỮ ĐIỆN TỬ</a>
+        </div>
+        <div class="col-md-7 d-flex align-items-center mt-3 ms-3 me-3 ">
+            <div class="input-group d-flex justify-content-end d-flex align-items-center">
+                <input type="search" id="myInput" placeholder="Tìm kiếm thư mục hoặc tập tin"
+                       class="form-control rounded-pill p-2 ps-3">
+                <div class="input-group-addon me-3">
+                    <i class="fa fa-search fs-5 "></i>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-evenly col-md-2 d-flex align-items-center mt-3 ms-3   ">
+            <a href="#"><img class="ms-2" src="/image/header/vn.png"></a>
+            <a href="#"><img class="ms-2" src="/image/header/us.png"></a>
+            <a href="#"><img class="ms-2" src="/image/header/profile.png"></a>
+            <div class=" dropdown ">
+                <a class=" border-0 dropdown-toggle" href="#" th:value="${username}" role="button" id="loginuser" data-bs-toggle="dropdown" aria-expanded="false">
+                    [(${username})]
+                </a>
+                <ul class=" dropdown-menu" aria-labelledby="dropdownMenuLinkk">
+                    <li><a class="dropdown-item" href="/web/attachment/Guide">Hướng dẫn sử dụng</a></li>
+                    <li><a class="dropdown-item" href="/logout">Đăng xuất</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

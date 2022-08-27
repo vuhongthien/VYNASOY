@@ -1,0 +1,40 @@
+body{
+color: #5F6368 !important;
+}
+a {
+    color: #5F6368 !important;
+    text-decoration: none;
+}
+
+.col-md-12.p-2.ps-4.rounded-start.rounded-pill {
+    font-size: 13px;
+    background: transparent;
+    border: none;
+    /* font-style: unset; */
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 700;
+    line-height: 15px;
+    /* font-family: Arial; */
+    color: #5F6368 !important;
+    /* for img */
+    position: relative;
+    display: inline-block;
+}
+
+.col-md-12.p-2.ps-4.rounded-start.rounded-pill .img-hover{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+.col-md-12.p-2.ps-4.rounded-start.rounded-pill:hover .img-hover{
+    display: inline;
+}
+
+.col-md-12.p-2.ps-4.rounded-start.rounded-pill:hover {
+   background: #6EB43F;
+   color: #fff !important;
+}

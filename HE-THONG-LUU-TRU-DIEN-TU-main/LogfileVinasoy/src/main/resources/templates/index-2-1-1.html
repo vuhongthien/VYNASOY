@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link th:href="@{/css/css-header.css}" rel="stylesheet" />
+  <link th:href="@{/css/css-help.css}" rel="stylesheet" />
+  <link th:href="@{/css/css-menu.css}" rel="stylesheet" />
+  <link th:href="@{/css/css-content.css}" rel="stylesheet" />
+  <link th:href="@{/css/active/activemenu2.css}" rel="stylesheet">
+
+
+</head>
+<body>
+<div class="container-fluid">
+  <div class="row">
+    <th:block th:insert="~{layout/fragment-header :: header}"></th:block>
+    <th:block th:insert="~{layout/fragment-menu :: menu}"></th:block>
+    <th:block th:insert="~{content/content-2-1-1 :: content-2-1-1}"></th:block>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.3/js/jquery.tablesorter.min.js" ></script>
+    <script th:src="@{/js/script.js}"></script>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
